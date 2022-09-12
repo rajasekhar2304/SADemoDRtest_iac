@@ -3,7 +3,7 @@
   shell: "chdir={{ dest_dir }} /root/.local/bin/eb deploy" 
   register: appv_output
   tags:
-   - ebdeploy
+   - eb_deploy
 - set_fact: 
       ver_no: "{{ appv_output.stdout | regex_search('app-\\d{6}_\\d{12}')}}"
 - debug:

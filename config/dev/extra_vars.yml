@@ -1,2 +1,2 @@
-src_dir: "/var/lib/jenkins/workspace/SADemoDR/"
+src_dir: "/var/lib/jenkins/workspace/raja/SADemoDR/"
 dest_dir: "/home/ubuntu/SADemo/dev"
