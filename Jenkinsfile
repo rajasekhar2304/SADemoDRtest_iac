@@ -43,18 +43,18 @@ pipeline {
                     tags: 'copy_files'
             }
         }
-        stage('Deploy') {
-            steps {
-                ansiblePlaybook become: true, 
-                    credentialsId: 'JENKINS_APP_SERVER',
-                    disableHostKeyChecking: true, 
-                    installation: 'ansible', 
-                    inventory: 'SADemoTest_iac/inventories/dev.inv', 
-                    limit: 'jenkinsServer', 
-                    playbook: 'SADemoTest_iac/appDeploy.yml',
-                    tags: 'eb_deploy'                
-            }
-        }
+        // stage('Deploy') {
+        //     steps {
+        //         ansiblePlaybook become: true, 
+        //             credentialsId: 'JENKINS_APP_SERVER',
+        //             disableHostKeyChecking: true, 
+        //             installation: 'ansible', 
+        //             inventory: 'SADemoTest_iac/inventories/dev.inv', 
+        //             limit: 'jenkinsServer', 
+        //             playbook: 'SADemoTest_iac/appDeploy.yml',
+        //             tags: 'eb_deploy'                
+        //     }
+        // }
         
     }
 }
