@@ -4,7 +4,7 @@
     src: "{{ src_dir }}"
     dest: "{{ dest_dir }}"
     rsync_opts:
-        - "--exclude=node_modules"
+        # - "--exclude=node_modules"
         - "--exclude=SADemoDRtest_iac"
         - "--exclude=.git"
         - "--exclude=.gitignore"
