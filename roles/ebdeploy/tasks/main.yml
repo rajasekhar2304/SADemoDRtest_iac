@@ -1,6 +1,6 @@
 - name: eb appversion
   become: true
-  shell: "chdir={{ dest_dir }} /home/dradmin/.ebcli-virtual-env/executables/eb deploy" 
+  shell: "chdir={{ dest_dir }} eb deploy" 
   register: appv_output
   tags:
    - ebdeploy
