@@ -13,12 +13,12 @@ pipeline {
                 }
             }  
         }             
-        stage('Build') {
-            steps {
-                sh "npm install"
-                sh "npm run build"               
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         sh "npm install"
+        //         sh "npm run build"               
+        //     }
+        // }
         stage('Directory Cleaning') {
             steps {
                 ansiblePlaybook become: true,
@@ -41,6 +41,12 @@ pipeline {
                     limit: 'jenkinsServer', 
                     playbook: 'SADemoTest_iac/appDeploy.yml',
                     tags: 'copy_files'
+            }
+        }
+        stage('Build') {
+            steps {
+                sh "npm install"
+                sh "npm run build"               
             }
         }
         // stage('Deploy') {
