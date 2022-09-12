@@ -25,9 +25,9 @@ pipeline {
                     credentialsId: 'JENKINS_APP_SERVER',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
-                    inventory: 'SADemoTest_iac/inventories/dev.inv', 
+                    inventory: 'SADemoDRtest_iac/inventories/dev.inv', 
                     limit: 'jenkinsServer', 
-                    playbook: 'SADemoTest_iac/appDeploy.yml',
+                    playbook: 'SADemoDRtest_iac/appDeploy.yml',
                     tags: 'delete_files'
             }
         }
@@ -37,9 +37,9 @@ pipeline {
                     credentialsId: 'JENKINS_APP_SERVER',
                     disableHostKeyChecking: true, 
                     installation: 'ansible', 
-                    inventory: 'SADemoTest_iac/inventories/dev.inv', 
+                    inventory: 'SADemoDRtest_iac/inventories/dev.inv', 
                     limit: 'jenkinsServer', 
-                    playbook: 'SADemoTest_iac/appDeploy.yml',
+                    playbook: 'SADemoDRtest_iac/appDeploy.yml',
                     tags: 'copy_files'
             }
         }
@@ -55,9 +55,9 @@ pipeline {
         //             credentialsId: 'JENKINS_APP_SERVER',
         //             disableHostKeyChecking: true, 
         //             installation: 'ansible', 
-        //             inventory: 'SADemoTest_iac/inventories/dev.inv', 
+        //             inventory: 'SADemoDRtest_iac/inventories/dev.inv', 
         //             limit: 'jenkinsServer', 
-        //             playbook: 'SADemoTest_iac/appDeploy.yml',
+        //             playbook: 'SADemoDRtest_iac/appDeploy.yml',
         //             tags: 'eb_deploy'                
         //     }
         // }
