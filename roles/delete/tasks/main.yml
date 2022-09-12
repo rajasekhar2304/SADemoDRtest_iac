@@ -1,0 +1,6 @@
+- name: Remove file (delete file)
+  file:
+    path: "{{ dest_dir }}/*"
+    state: absent
+  tags:
+        - clean_files

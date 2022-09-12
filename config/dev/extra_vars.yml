@@ -1,0 +1,2 @@
+src_dir: "/var/lib/jenkins/workspace/SADemoDR/"
+dest_dir: "/home/ubuntu/SADemo/dev"

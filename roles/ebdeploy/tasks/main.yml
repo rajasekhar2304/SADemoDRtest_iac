@@ -1,0 +1,10 @@
+- name: eb appversion
+  shell: "chdir={{ dest_dir }} /home/dradmin/.ebcli-virtual-env/executables/eb deploy" 
+  register: appv_output
+  tags:
+   - ebdeploy
+- set_fact: 
+      ver_no: "{{ appv_output.stdout | regex_search('app-\\d{6}_\\d{12}')}}"
+- debug:
+      # var: ver_no    
+      msg: "{{ appv_output.stdout_lines }}"
