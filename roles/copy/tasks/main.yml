@@ -10,6 +10,5 @@
         - "--exclude=.gitignore"
         - "--exclude=README.md"
         - "--exclude=SADemoDRtest_iac@tmp"
-        - "--exclude=ssh1211866805053454738.key"
   tags:
     - copy_files
