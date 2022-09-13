@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "$PATH:/usr/share/maven/bin"
+    }
     stages {
         stage("SCM Checkout") {
             steps {
@@ -17,6 +20,13 @@ pipeline {
             steps {
                 sh "npm install"
                 sh "npm run build"               
+            }
+        }
+        stage('SonarQube analysis') {
+            steps{
+                withSonarQubeEnv('sonarqube-8.9.9') {      
+                    sh "mvn sonar:sonar"
+                }
             }
         }
         stage('Directory Cleaning') {
