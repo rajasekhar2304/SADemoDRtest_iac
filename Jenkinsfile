@@ -26,10 +26,10 @@ pipeline {
             steps{
                 withSonarQubeEnv('sonarqube-8.9.9') {      
                     sh "/opt/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
-                    -Dsonar.projectKey=nodejs-project \
+                    -Dsonar.projectKey=react-app1 \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=http://3.89.19.217:9000 \
-                    -Dsonar.login=7c8acc9013465ed3b492e23b800e1de1ffacb34a"
+                    -Dsonar.login=d805a4552e97f21e5d0236f98e5c4ab3bd35d0bd"
                 }
             }
         }
