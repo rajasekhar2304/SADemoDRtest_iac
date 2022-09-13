@@ -25,7 +25,7 @@ pipeline {
         stage('SonarQube analysis') {
             steps{
                 withSonarQubeEnv('sonarqube-8.9.9') {      
-                    sh "sonar-scanner \
+                    sh "/opt/sonar-scanner-4.7.0.2747-linux/bin/sonar-scanner \
                     -Dsonar.projectKey=nodejs-project \
                     -Dsonar.sources=. \
                     -Dsonar.host.url=http://3.89.19.217:9000 \
