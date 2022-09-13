@@ -1,2 +1,2 @@
 [jenkinsServer]
-52.23.204.182 ansible_user=ubuntu
+44.204.184.147 ansible_user=ubuntu
