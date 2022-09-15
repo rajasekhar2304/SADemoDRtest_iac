@@ -13,12 +13,7 @@ pipeline {
                 }
             }  
         }             
-        stage('Build') {
-            steps {
-                sh "npm install"
-                sh "npm run build"               
-            }
-        }
+        
         stage("SonarQube analysis") 
 		{
 			environment 
@@ -57,6 +52,12 @@ pipeline {
 			}
 
     	} 
+        stage('Build') {
+            steps {
+                sh "npm install"
+                sh "npm run build"               
+            }
+        }
         // stage('SonarQube analysis') {
         //     steps{
         //         withSonarQubeEnv('sonarqube-8.9.9') {      
