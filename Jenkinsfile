@@ -31,7 +31,7 @@ pipeline {
 				{
 					sh ''' 
 					${scannerHome}/bin/sonar-scanner \
-                	-D sonar.projectKey=me_eshop
+                	-D sonar.projectKey=my-react-app
 					'''
 				}
 			}
